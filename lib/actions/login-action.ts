@@ -23,8 +23,6 @@ export const loginUser = actionClient
         }
       );
 
-      console.log("response", response);
-
       const data = await response.json();
 
       if (data.success) {

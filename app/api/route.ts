@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 // Helper function to handle API routes
 async function handleRequest(url: URL) {
   const path = url.pathname;
-  console.log("path", path);
 
   // Mock login
   if (path === "/api/auth/login") {

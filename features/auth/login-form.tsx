@@ -28,7 +28,6 @@ export function LoginForm() {
       },
       actionProps: {
         onSuccess: (result) => {
-          console.log("Result", result.data);
           if (result.data?.success) {
             showToast({
               title: "Logged in successfully",
@@ -44,7 +43,6 @@ export function LoginForm() {
           }
         },
         onError: (error) => {
-          console.log("Error", error);
           showToast({
             title: "Login failed",
             description: error.error?.serverError || "An error occurred",
@@ -54,8 +52,6 @@ export function LoginForm() {
       },
     }
   );
-
-  console.log("form", form.formState);
 
   return (
     <form onSubmit={handleSubmitWithAction} className="space-y-4">
